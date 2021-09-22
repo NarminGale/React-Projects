@@ -11,10 +11,10 @@ function App() {
 
   return (
     <main>
-      <section className="menu section">
+      <section className="menu">
         <div className="title">
           <h2>our menu</h2>
-          <div className="underline"></div>
+          <div className="title-underline"></div>
         </div>
         <Categories />
         <Menu items={menuItems} />
