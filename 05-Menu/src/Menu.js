@@ -11,8 +11,8 @@ function Menu({ items }) {
             <img src={img} alt={title} className="photo" />
             <div className="item-info">
               <header>
-                <h4>{title}</h4>
-                <h4 className="price">{price}</h4>
+                <h5>{title}</h5>
+                <span className="price">{price}</span>
               </header>
               <p className="item-text">{desc}</p>
             </div>
