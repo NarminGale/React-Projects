@@ -3,12 +3,26 @@ import React, { useState, useEffect } from 'react'
 function SingleColor({ rgb, weight, index, hexColor }) {
   const [alert, setAlert] = useState(false)
   const bcg = rgb.join(',')
+  const hexValue = `#${hexColor}`
+
+  useEffect(() => {
+    const timeOut = setTimeout(() => {
+      setAlert(false)
+    }, 1500)
+    return () => clearTimeout(timeOut)
+  }, [alert])
+
   return (
     <article
       className={`color ${index > 10 && 'color-light'}`}
-      style={{ background: `rgb(${bcg})` }}>
+      style={{ background: `rgb(${bcg})` }}
+      onClick={() => {
+        setAlert(true)
+        navigator.clipboard.writeText(hexValue)
+      }}>
       <p className="percent-value">{weight}%</p>
-      <p className="color-value">{`#${hexColor}`}</p>
+      <p className="color-value">{hexValue}</p>
+      <p className="alert">{alert && 'Copied to th eclipboard'}</p>
     </article>
   )
 }
