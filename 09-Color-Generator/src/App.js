@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-
+import SingleColor from './SingleColor'
 import Values from 'values.js'
 
 function App() {
@@ -12,6 +12,7 @@ function App() {
 
     try {
       let colors = new Values(color).all(10)
+      setList(colors)
     } catch (error) {
       setError(true)
       console.log(error)
@@ -35,7 +36,16 @@ function App() {
         </form>
       </section>
       <section className="colors">
-        <h4>list goes here</h4>
+        {list.map((color, index) => {
+          return (
+            <SingleColor
+              key={index}
+              {...color}
+              index={index}
+              hexColor={color.hex}
+            />
+          )
+        })}
       </section>
     </>
   )
