@@ -6,7 +6,7 @@ function App() {
   const [name, setName] = useState('')
   const [list, setList] = useState([])
   const [isEditing, setIsEditing] = useState(false)
-  const [editId, setEditId] = useState(null)
+  const [editID, setEditID] = useState(null)
   const [alert, setAlert] = useState({ show: false, msg: '', type: '' })
 
   const handleSubmit = (e) => {
@@ -23,6 +23,7 @@ function App() {
       setName('')
     }
   }
+
   return (
     <section className="section-center">
       <form className="grocery-form" onSubmit={handleSubmit}>
@@ -34,11 +35,9 @@ function App() {
             className="grocery"
             placeholder="e.g. eggs"
             value={name}
-            onChange={(e) => {
-              setName(e.target.value)
-            }}
+            onChange={(e) => setName(e.target.value)}
           />
-          <button type="button" className="submit-btn">
+          <button type="submit" className="submit-btn">
             {isEditing ? 'edit' : 'submit'}
           </button>
         </div>
