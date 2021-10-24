@@ -1,5 +1,5 @@
 import React from 'react'
-import logo from './me-logo.png'
+import logo from './images/me-logo.png'
 import { FaTimes } from 'react-icons/fa'
 import { social, links } from './data'
 import { useGlobalContext } from './context'
