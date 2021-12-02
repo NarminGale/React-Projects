@@ -149,10 +149,12 @@ Stripe Styles
   z-index: 1;
 }
 .nav-center {
+  padding-top: 1rem;
   width: 90vw;
   max-width: var(--max-width);
 }
 .nav-header {
+  padding-left: 5rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -191,13 +193,13 @@ Stripe Styles
 .hero {
   position: relative;
   min-height: 100vh;
-  margin-top: -5rem;
   display: grid;
   grid-template-columns: 1fr;
   justify-items: center;
 }
 .hero-center {
   width: 90vw;
+  padding-top: 1rem;
   max-width: var(--max-width);
   display: grid;
   align-items: center;
@@ -247,7 +249,7 @@ Stripe Styles
     background: transparent;
     border-color: transparent;
     font-size: 1.1rem;
-    color: white;
+    color: var(--clr-black);
     text-transform: capitalize;
     letter-spacing: 1px;
     width: 10rem;
