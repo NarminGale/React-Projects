@@ -8,8 +8,8 @@ function App() {
   return (
     <>
       <Navbar />
-      <Hero />
       <Sidebar />
+      <Hero />
       <Submenu />
     </>
   )
