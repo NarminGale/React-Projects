@@ -14,9 +14,15 @@ function Navbar() {
     openSubmenu(page, { center, bottom })
   }
 
+  const handleSubmenu = (e) => {
+    if (!(e.target.className === 'link-btn')) {
+      closeSubmenu()
+    }
+  }
+
   return (
     <nav>
-      <div className="nav-center">
+      <div className="nav-center" onMouseOver={handleSubmenu}>
         <div className="nav-header">
           <img src={logo} className="nav-logo" alt="stripe" />
           <button className="btn toggle-btn" onClick={openSidebar}>
